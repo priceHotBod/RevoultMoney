@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/currency_viewholder_parent_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/currency_viewholder_flag_imageview"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/currency_viewholder_flag_imageview" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/currency_viewholder_flag_imageview"
+        android:layout_toRightOf="@+id/currency_viewholder_flag_imageview"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/currency_viewholder_abbrev_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="bottom"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currency_viewholder_full_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/currency_viewholder_value_edittext"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
