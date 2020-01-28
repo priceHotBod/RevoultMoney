@@ -2,6 +2,7 @@
 <RelativeLayout
     android:id="@+id/currency_viewholder_parent_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -47,7 +48,7 @@
         android:layout_marginRight="12dp"
         android:textSize="18sp"
         android:maxLines="1"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -1,6 +1,6 @@
-package com.example.revoultapplication.POJO;
+package com.example.revolutapplication.POJO;
 
-import com.example.revoultapplication.R;
+import com.example.revolutapplication.R;
 
 // POJO to contain all the attributes of a currency
 public class Currency {
@@ -8,6 +8,7 @@ public class Currency {
     private String currencyAbbreviatedName;
     private String currencyFullName;
     private double exchangeRate;  // The exchange rate as compared to the currency currently being examined
+    private double baseCurrencyQuantity = 1;  // The quantity of the base currency to compare to. The displayed value will be exchangeRate * baseCurrencyQuantity
     private int flagImageReference = -1;
 
     public Currency(String currencyAbbreviatedName, double exchangeRate){
@@ -24,6 +25,8 @@ public class Currency {
     public void setExchangeRate(double exchangeRate) {
         this.exchangeRate = exchangeRate;
     }
+    public double getBaseCurrencyQuantity() { return baseCurrencyQuantity; }
+    public void setBaseCurrencyQuantity(double baseCurrencyQuantity) { this.baseCurrencyQuantity = baseCurrencyQuantity; }
 
     public String getCurrencyFullName(){
         if (this.currencyFullName == null) {
